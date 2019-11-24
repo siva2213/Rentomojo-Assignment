@@ -31,7 +31,7 @@ class PostDetails extends Component {
   onDeletePost = () => {
     this.props.deletePost(this.state.postId).then(resp => {
       if (resp) {
-        this.props.history.push(`/post/${this.props.postDetails.userId}`);
+        this.props.history.push(`/userPost/${this.props.postDetails.userId}`);
       }
     });
   };
