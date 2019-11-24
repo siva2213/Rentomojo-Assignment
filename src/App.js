@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { Route, Switch, withRouter } from "react-router-dom";
+import UserDashboard from "./components/UserDashboard";
+import Post from "./components/Post";
+import { Icon } from "antd";
+import PostDetails from "./components/PostDetails";
 
-function App() {
+function App(props) {
+  const styling = { width: "40%" };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="main-container">
+      <div className="app-header">
+        <div style={styling}>
+          <Icon
+            onClick={() => {
+              props.history.push('/')
+            }}
+            type="home"
+          />
+        </div>
+        <div>Rentomojo Assignment</div>
+      </div>
+      <div className="sub-container">
+        <Switch>
+          <Route exact path="/" component={UserDashboard} />
+          <Route path="/userPost/:id?" component={Post} />
+          <Route path="/postDetails/:id?" component={PostDetails} />
+        </Switch>
+      </div>
     </div>
   );
 }
 
-export default App;
+export default withRouter(App);

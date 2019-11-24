@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-size: 16px;
 }
 
 .App-logo {
@@ -19,4 +20,91 @@
 
 .App-link {
   color: #09d3ac;
+}
+.main-container {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(237, 243, 243);
+}
+
+.app-header {
+  display: flex;
+  justify-content: flex-start;
+  padding: 1rem;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #dc3226;
+  color: white;
+  box-shadow: 0px 6px 8px 0px rgba(171, 171, 171, 0.63);
+}
+.card {
+  background-color: white;
+  margin: 2rem 1rem;
+  border-radius: 8px !important;
+  box-shadow: 0 1px 15px 1px rgba(62, 57, 107, 0.07) !important;
+  border: none !important;
+}
+.sub-card {
+  background-color: white;
+  margin: 1rem;
+  border-radius: 8px !important;
+  box-shadow: 14px 14px 12px -6px rgba(196, 184, 196, 1);
+}
+.card-header {
+  font-weight: 600;
+  font-size: 1.5rem;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+.card-body {
+  font-size: 1.2rem;
+  padding: 1rem 2rem 1rem 2rem;
+}
+/*********** Post Container **************/
+/* .post-header {
+  padding: 1rem;
+} */
+
+.post-container {
+  width: 80%;
+  margin: auto;
+}
+
+.post-body {
+  padding: 1rem;
+  font-weight: 600 !important;
+}
+
+/********** Post Details *****************/
+.postDetails-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.postName {
+  width: 80%;
+}
+
+.postBody {
+  widows: 80%;
+  margin: auto;
+}
+
+.commnets-container {
+  padding: 0.5rem 0 0.5rem 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.comments-section {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 1rem;
+}
+
+.ant-list-vertical .ant-list-item-meta-title {
+  margin-bottom: 12px !important;
+  color: rgba(0, 0, 0, 0.85) !important;
+  font-size: 14px !important;
+  line-height: 10px !important;
 }
